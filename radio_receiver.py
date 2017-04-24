@@ -1,6 +1,5 @@
 import csv
 from datetime import datetime
-import matplotlib.pyplot as pyplot
 from GPIOLibrary import GPIOProcessor
 import time
 
@@ -31,11 +30,6 @@ try:
         writer.writerow(['time', 'signal'])
         for i in range(len(received[0])):
             writer.writerow([received[0][i], received[1][i]])
-
-    # No display on dragonboard
-    #pyplot.plot(received[0], received[1])
-    #pyplot.axis([0, MAX_DURATION, -1, 2])
-    #pyplot.show
 
 finally:
     GP.cleanup()
