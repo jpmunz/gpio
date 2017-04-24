@@ -18,6 +18,5 @@ try:
         Pin34.low()
         time.sleep(0.5)
 
-
 finally:
     GP.cleanup()
